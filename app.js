@@ -7,6 +7,8 @@ const path = require('path')
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'))
 
+app.use(express.static('public'))
+
 // Mongoose
 const mongoose = require('mongoose')
 mongoose.connect('mongodb://localhost:27017/golfMap2021', {useNewUrlParser: true, useUnifiedTopology: true})
@@ -18,7 +20,7 @@ mongoose.connect('mongodb://localhost:27017/golfMap2021', {useNewUrlParser: true
         console.log(err)
     })
 
-// Require Golf Course Model
+// Require Golf Course Model 
 const GolfCourse = require('./models/golfcourse.js')
 // Require Final Golf Course Data
 const golfCourseData = require('./utilities/golfCourseObject.js')
