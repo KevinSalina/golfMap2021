@@ -27,9 +27,10 @@ const golfCourseData = require('./utilities/golfCourseObject.js')
 
 
 // GeoCode get coordinates
-app.get('/', (req, res) =>{
-    // console.log('We got a request')
-    res.render('index')
+app.get('/', async (req, res) =>{
+    const golfCourses = await GolfCourse.find({})
+    console.log(golfCourses)
+    res.render('index', {golfCourses})
 })
 
 

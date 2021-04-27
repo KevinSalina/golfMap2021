@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <script src="https://kit.fontawesome.com/421a2e0bfb.js" crossorigin="anonymous"></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet'/>
     <link rel="stylesheet" href="styles.css">
     <title>2021 Golf Magazine Certificate Map</title>
@@ -16,11 +17,13 @@
 
 <body>
     <h1>Golf Map</h1>
-    <div id='map' style='width: 400px; height: 300px;'></div>
-
-
-
-
+    <div class="map-container">
+        <div id='map'></div>
+    </div>
+    
+    <script>
+        const golfCourses = <%-JSON.stringify(golfCourses)%>
+    </script>
     <script src="/map.js"></script>
 </body>
 

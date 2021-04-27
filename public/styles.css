@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-container{
+    width: 90vw;
+    height: 80vh;
+}
+
+#map{
+    width: 100%;
+    height: 100%;
+}
+
+.marker {
+    background-image: url('../assets/birdie.png');
+    background-size: cover;
+    width: 32px;
+    height: 32px;
+    /* border-radius: 50%; */
+    cursor: pointer;
+}
+
+.mapboxgl-popup {
+    max-width: 200px;
+  }
+  
+.mapboxgl-popup-content {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+  }
