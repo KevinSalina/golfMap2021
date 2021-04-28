@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --header-color: #007C63;
+    --text-color: #2F4858;
+    --bg-color: #F6EDD9;
+}
+
+html{
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    background: var(--bg-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 1.2rem;
+    overflow: hidden;
+}
+
+h1{
+    align-self: flex-start;
+    margin-bottom: 1rem;
+    color: var(--header-color);
+}
+
+p{
+    color: var(--text-color);
+}
+
+.subheader{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.certificate-link{
+    margin-bottom: 1rem;
+}
+
+.map-container{
+    height: 75vh;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+#map{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 5px;
+    border: 3px solid black;
+}
+
+.menu-container{
+    z-index: 10;
+    position: absolute;
+    background: white;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 5px 0px 5px 0px;
+    border: 1px solid lightgray;
+}
+
+#menu{
+    font-family: 'Lato', sans-serif;
+    font-size: .875rem;
+    margin-bottom: .5rem;
+    width: 100%;
+}
+
+#menu label{
+    margin-right: .5rem;
+    margin-left: .2rem;
+}
+
+#search{
+    /* background: darkcyan; */
+    width: 100%;
+}
+
+#search input{
+    width: 100%;
+}
+
+.marker {
+    background-image: url('../assets/blue-flag2.png');
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.mapboxgl-popup {
+    max-width: 200px;
+}
+  
+.mapboxgl-popup-content {
+    text-align: center;
+}
+
+.popup-desc{
+    margin-bottom: 0;
+}
+
+
+footer p{
+    font-size: .875rem;
+}
+
+footer i{
+    margin-left: .2rem;
+}

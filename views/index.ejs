@@ -8,23 +8,49 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
     <script src="https://kit.fontawesome.com/421a2e0bfb.js" crossorigin="anonymous"></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet'/>
-    <link rel="stylesheet" href="styles.css">
-    <title>2021 Golf Magazine Certificate Map</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/assets/golf-field.png">
+    <title>2021 Golfing Magazine Certificate Map</title>
     <script>
         const mapToken = '<%-process.env.MAPBOX_TOKEN%>'
     </script>
 </head>
 
 <body>
-    <h1>Golf Map</h1>
+    <h1>2021 Golfing Magazine Certificate Map</h1>
+    <p class="subheader">Use the map to find all courses included on the 2021 Golfing Magazine Certificate.</p>
+    <a class="certificate-link" href="https://freegolf.net/" target="_blank" rel="noopener noreferrer">Link to Certificate</a>
     <div class="map-container">
-        <div id='map'></div>
+        <div id='map'>
+            <div class="menu-container">
+                <div id="menu">
+                    <input id="kevinsalina/cko08i6lx5cop18o4igoxuojl" type="radio" name="rtoggle" value="default" checked="checked">
+                    <label for="kevinsalina/cko08i6lx5cop18o4igoxuojl">Default</label>
+                    <input id="mapbox/outdoors-v11" type="radio" name="rtoggle" value="outdoors">
+                    <label for="mapbox/outdoors-v11">Outdoors</label>
+                    <input id="mapbox/satellite-v9" type="radio" name="rtoggle" value="satellite">
+                    <label for="mapbox/satellite-v9">Satellite</label>
+                    <input id="mapbox/streets-v11" type="radio" name="rtoggle" value="streets">
+                    <label for="mapbox/streets-v11">Streets</label>
+                </div>
+                <div id="search">
+                    <input type="text" class="search" placeholder="Search Golf Course">
+                    <ul class="suggestions">
+                        <li></li>
+                    </ul>
+                </div>
+        </div>
+        </div>
     </div>
+
+    <footer>    
+        <p>Created by <a href="https://github.com/KevinSalina" target="_blank" rel="noopener noreferrer">Kevin Salina</a><i class="fab fa-github"></i></p>
+    </footer>
     
     <script>
         const golfCourses = <%-JSON.stringify(golfCourses)%>
     </script>
-    <script src="/map.js"></script>
+    <script src="/js/map.js"></script>
 </body>
 
 </html> 

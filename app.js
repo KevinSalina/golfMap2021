@@ -11,7 +11,7 @@ app.use(express.static('public'))
 
 // Mongoose
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost:27017/golfMap2021', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect('mongodb://localhost:27017/golfMap2021', {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
     .then(() =>{
         console.log('CONNECTION')
     })
@@ -19,6 +19,7 @@ mongoose.connect('mongodb://localhost:27017/golfMap2021', {useNewUrlParser: true
         console.log('ERROR')
         console.log(err)
     })
+
 
 // Require Golf Course Model 
 const GolfCourse = require('./models/golfcourse.js')
@@ -29,7 +30,6 @@ const golfCourseData = require('./utilities/golfCourseObject.js')
 // GeoCode get coordinates
 app.get('/', async (req, res) =>{
     const golfCourses = await GolfCourse.find({})
-    console.log(golfCourses)
     res.render('index', {golfCourses})
 })
 

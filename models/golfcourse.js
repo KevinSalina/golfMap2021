@@ -23,7 +23,7 @@ const golfCourseSchema = new Mongoose.Schema({
 }, {toJSON: {virtuals: true}})
 
 golfCourseSchema.virtual('properties.popUpMarkup').get(function(){
-    return `<a class="popup-link" href="${this.website}">${this.name}</a>
+    return `<a class="popup-link" href="${this.website}" target="_blank" rel="noopener noreferrer">${this.name}</a>
          <p class="popup-location"><b>${this.location}</b></p>
          <p class="popup-desc">${this.description}</p>`
 })
