@@ -34,12 +34,13 @@
                     <label for="mapbox/streets-v11">Streets</label>
                 </div>
                 <div id="search">
-                    <input type="text" class="search" placeholder="Search Golf Course">
+                    <div class="input-container">
+                        <input type="text" class="search-input" placeholder="Search Golf Course"><i class=" search-dropdown-btn fas fa-chevron-down"></i>
+                    </div>
                     <ul class="suggestions">
-                        <li></li>
                     </ul>
                 </div>
-        </div>
+            </div>
         </div>
     </div>
 
@@ -51,6 +52,7 @@
         const golfCourses = <%-JSON.stringify(golfCourses)%>
     </script>
     <script src="/js/map.js"></script>
+    <script src="/js/search.js"></script>
 </body>
 
 </html> 

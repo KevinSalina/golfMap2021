@@ -43,6 +43,7 @@ p{
 
 .certificate-link{
     margin-bottom: 1rem;
+    align-self: flex-start;
 }
 
 .map-container{
@@ -85,13 +86,54 @@ p{
 }
 
 #search{
-    /* background: darkcyan; */
     width: 100%;
 }
 
-#search input{
+.input-container{
+    display: flex;
     width: 100%;
+    align-items: center;
+    justify-content: space-between;
 }
+
+#search input{
+    flex: 1;
+    margin-right: .25rem;
+    padding: .25rem;
+    margin-bottom: .25rem;
+}
+
+#search .search-dropdown-btn{
+    color: #787878;
+    font-size: 1rem;
+}
+
+#search .search-dropdown-btn.hide{
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+.suggestions{
+    opacity: 1;
+    max-height: 250px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.suggestions.hide{
+    opacity: 0;
+    max-height: 0px;
+    overflow: hidden;
+}
+
+.suggestions .name{
+    cursor: pointer;
+}
+
+.suggestions .name:hover{
+    background: lightgray;
+}
+
 
 .marker {
     background-image: url('../assets/blue-flag2.png');
@@ -121,3 +163,10 @@ footer p{
 footer i{
     margin-left: .2rem;
 }
+
+
+
+
+
+
+
