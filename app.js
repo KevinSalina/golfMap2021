@@ -3,8 +3,7 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const path = require('path')
-const dbUrl = process.env.DB_URL
-// 'mongodb://localhost:27017/golfMap2021'
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/golfMap2021'
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'))
@@ -19,7 +18,7 @@ mongoose.connect(dbUrl, {useNewUrlParser: true, useUnifiedTopology: true, useFin
     })
     .catch((err)=>{
         console.log('ERROR')
-        console.log(err)
+        console.log(err) 
     }) 
 
 
