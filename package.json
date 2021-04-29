@@ -4,7 +4,8 @@
   "description": "2021 Golfing Magazine Interactive Map",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "Kevin Salina",
   "license": "ISC",
