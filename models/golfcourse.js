@@ -28,6 +28,10 @@ golfCourseSchema.virtual('properties.popUpMarkup').get(function(){
          <p class="popup-desc">${this.description}</p>`
 })
 
+golfCourseSchema.virtual('properties.googleMapLink').get(function(){
+    return `<a class="popup-link" href="google.com/maps/dir/${this.name}/@${this.geometry.coordinates[1]}, ${this.geometry.coordinates[0]}}" target="_blank" rel="noopener noreferrer">Directions</a>`
+})
+
 const GolfCourse = new Mongoose.model('GolfCourse', golfCourseSchema)
 
 module.exports = GolfCourse

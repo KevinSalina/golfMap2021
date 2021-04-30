@@ -16,7 +16,8 @@ const map = new mapboxgl.Map({
         const popup = new mapboxgl.Popup({offset: 25}).setHTML(
             `<a class="popup-link" href="${course.website}" target="_blank" rel="noopener noreferrer">${course.name}</a>
             <p class="popup-location"><b>${course.location}</b></p>
-            <p class="popup-desc">${course.description}</p>`
+            <p class="popup-desc">${course.description}</p>
+            <a class="popup-link" href="https://www.google.com/maps/dir//${course.name}/@${course.geometry.coordinates[1]}, ${course.geometry.coordinates[0]}}" target="_blank" rel="noopener noreferrer">Directions</a>`
         )
         new mapboxgl.Marker(el)
         .setLngLat(course.geometry.coordinates)
