@@ -7,9 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
     <script src="https://kit.fontawesome.com/421a2e0bfb.js" crossorigin="anonymous"></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet'/>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="icon" href="/assets/golf-field.png">
+
+    <meta name="description" content="2021 Golfing Magazine Certificate Map" />
+    <meta name="title" property="og:title" content="2021 Golfing Magazine Certificate Map" />
+    <meta property="og:type" content="Application" />
+    <meta name="image" property="og:image" content="https://live.staticflickr.com/65535/51267145308_5889861541_h.jpg" />
+    <meta name="description" property="og:description" content="2021 Golfing Magazine Certificate Map" />
+    <meta name="author" content="Kevin Salina" />
+
+
+
+
     <title>2021 Golfing Magazine Certificate Map</title>
     <script>
         const mapToken = '<%-process.env.MAPBOX_TOKEN%>'
@@ -19,12 +30,14 @@
 <body>
     <h1>2021 Golfing Magazine Certificate Map</h1>
     <p class="subheader">Use the map to find all courses included on the 2021 Golfing Magazine Certificate.</p>
-    <a class="certificate-link" href="https://freegolf.net/" target="_blank" rel="noopener noreferrer">Link to Certificate</a>
+    <a class="certificate-link" href="https://freegolf.net/" target="_blank" rel="noopener noreferrer">Link to
+        Certificate</a>
     <div class="map-container">
         <div id='map'>
             <div class="menu-container">
                 <div id="menu">
-                    <input id="kevinsalina/cko08i6lx5cop18o4igoxuojl" type="radio" name="rtoggle" value="default" checked="checked">
+                    <input id="kevinsalina/cko08i6lx5cop18o4igoxuojl" type="radio" name="rtoggle" value="default"
+                        checked="checked">
                     <label for="kevinsalina/cko08i6lx5cop18o4igoxuojl">Default</label>
                     <input id="mapbox/outdoors-v11" type="radio" name="rtoggle" value="outdoors">
                     <label for="mapbox/outdoors-v11">Outdoors</label>
@@ -35,7 +48,8 @@
                 </div>
                 <div id="search">
                     <div class="input-container">
-                        <input type="text" class="search-input" placeholder="Search Golf Course"><i class=" search-dropdown-btn fas fa-chevron-down"></i>
+                        <input type="text" class="search-input" placeholder="Search Golf Course"><i
+                            class=" search-dropdown-btn fas fa-chevron-down"></i>
                     </div>
                     <ul class="suggestions">
                     </ul>
@@ -44,15 +58,16 @@
         </div>
     </div>
 
-    <footer>    
-        <p>Created by <a href="https://github.com/KevinSalina" target="_blank" rel="noopener noreferrer">Kevin Salina</a><i class="fab fa-github"></i></p>
+    <footer>
+        <p>Created by <a href="https://github.com/KevinSalina" target="_blank" rel="noopener noreferrer">Kevin
+                Salina</a><i class="fab fa-github"></i></p>
     </footer>
-    
+
     <script>
-        const golfCourses = <%-JSON.stringify(golfCourses)%>
+        const golfCourses = <% -JSON.stringify(golfCourses) %>
     </script>
     <script src="/js/map.js"></script>
     <script src="/js/search.js"></script>
 </body>
 
-</html> 
+</html>
